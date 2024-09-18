@@ -1,3 +1,19 @@
+const numbers = document.querySelectorAll('.number');
+const symbols = document.querySelectorAll('.symbol');
+
+function operate (symbol,a,b) {
+	switch (symbol) {
+		case '+':
+			return add(a,b);
+		case '-':
+			return subtract(a,b);
+		case '*':
+			return multiply(a,b);
+		case '/':
+			return divide(a,b);
+	}
+}
+
 const add = function(a,b) {
 	let sum = a + b;
 	return sum;
@@ -8,8 +24,8 @@ const subtract = function(a,b) {
 	return difference;
 };
 
-const multiply = function(array) {
-	const product = array.reduce((acc, curr) => acc * curr, 1);
+const multiply = function(a,b) {
+	let product = a * b;
 	return product;
 };
 
